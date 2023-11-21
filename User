@@ -1,0 +1,22 @@
+
+public class User {
+	
+	    private String password;
+	    private String email;
+	    private int accountNumber;
+
+	    public User(String password, String email, int accountNumber) {
+	        this.password = password;
+	        this.email = email;
+	        this.accountNumber = accountNumber;
+	    }
+
+	    public void displayUserInfo() {
+	        System.out.println("User Information:");
+	        System.out.println("Email: " + email);
+	        System.out.println("Account Number: " + accountNumber);
+	    }
+	}
+
+
+
