@@ -1,0 +1,112 @@
+import java.util.Scanner;
+
+
+public class UniverseLearning {
+public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Welcome to Learn the Universe!");
+        System.out.println("1. Register as a Student");
+        System.out.println("2. Register as a Teacher");
+        
+        System.out.println("Enter your choice: ");
+        
+        int userTypeChoice = input.nextInt();
+
+        if (userTypeChoice == 1) 
+          {
+                                                                                    // Student registration
+            System.out.print("Enter your email: ");
+            String email = input.next();
+            System.out.print("Create a password: ");
+            String password = input.next();
+            System.out.print("Enter your account number: ");
+            int accountNumber = input.nextInt();
+
+            Student student = new Student(password, email, accountNumber);
+            student.displayUserInfo();
+            student.exploreUniverse();
+         } else if (userTypeChoice == 2) {
+                                                                                 // Teacher registration
+            System.out.print("Enter your email: ");
+            String email = input.next();
+            System.out.print("Create a password: ");
+            String password = input.next();
+            System.out.print("Enter your account number: ");
+            int accountNumber = input.nextInt();
+            System.out.print("Enter your degree (BSc/MSc): ");
+            String degree = input.next();
+
+            Teacher teacher = new Teacher(password, email, accountNumber, degree);
+            teacher.displayTeacherInfo();
+            teacher.teachStudents();
+        } 
+        else {
+            System.out.println("Invalid choice. Please select 1 or 2.");
+        }
+        
+        
+        System.out.println("1. If you want to know about a planet, click here.");
+        System.out.println("2. If you want to know about stars/stellars, click here.");
+        System.out.println("3. If you want to know about the solar system, click here.");
+        System.out.println("4. If you want to know about galaxies, click here.");
+        System.out.println("5. If you want to know about black holes, click here.");
+        System.out.println("6. Search dictionary.");
+        System.out.println("7. Contact with a teacher.");
+        System.out.println("8. Want to join as a teacher?");
+        System.out.println("9. Exit.");
+
+        for(int i=1;i<10;i--)
+        {
+        
+        int choice = input.nextInt();
+        
+        
+        
+        switch (choice) {
+            case 1 ->                                                                           // Code for planet information
+                System.out.println("You selected planet information. ");
+            case 2 ->                                                                         // Code for star/stellar information
+                System.out.println("You selected star/stellar information. ");
+            case 3 ->                                                                  // Code for solar system information
+                System.out.println("You selected solar system information. ");
+            case 4 ->                                                                 // Code for galaxy information
+                System.out.println("You selected galaxy information. ");
+            case 5 ->                                                              // Code for black hole information
+                System.out.println("You selected black hole information. ");
+            case 6 ->                                                               // Code for searching the dictionary
+                System.out.println("You selected dictionary search. ");
+            case 7 -> {
+                                                                                     // Contact with a teacher
+                System.out.println("1. Pay for consulting");
+                int teacherChoice = input.nextInt();
+                if (teacherChoice == 1) {
+                    System.out.println("You selected 'Pay for consulting'. Add payment and communication code here.");
+                } else {
+                    System.out.println("Invalid choice. Please select a valid option.");
+                }
+        }
+            case 8 -> {
+                                                                                       // Want to join as a teacher
+                System.out.println("Conditions to join as a teacher:");
+                System.out.println("1. BSc in Physics or Astronomy");
+                System.out.println("2. MSc in Astronomy");
+                System.out.println("Please enter your qualifications:");
+                System.out.println("BSc in Physics or Astronomy (yes/no):");
+                String bscQualification = input.next().toLowerCase();
+                System.out.println("MSc in Astronomy (yes/no):");
+                String mscQualification = input.next().toLowerCase();
+                if (bscQualification.equals("yes") && mscQualification.equals("yes")) {
+                    System.out.println("You meet the qualifications to join as a teacher.");
+                } else {
+                    System.out.println("You do not meet the qualifications to join as a teacher.");
+                }
+        }
+            case 9 -> {System.out.println("Goodbye!");
+            break;
+            }
+            default -> System.out.println("Invalid choice. Please select a valid option.");
+        }
+        }
+    }
+}
