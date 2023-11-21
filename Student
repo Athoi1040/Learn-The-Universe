@@ -1,0 +1,13 @@
+
+class Student extends User {
+	    public Student(String password, String email, int accountNumber) {
+	        super(password, email, accountNumber);
+	    }
+
+	    public void exploreUniverse() {
+	        System.out.println("Explore the Universe as a student.");
+	        
+	    }
+	}
+
+
