@@ -6,8 +6,8 @@ public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
         System.out.println("Welcome to Learn the Universe!");
-        System.out.println("1. Register as a Student");
-        System.out.println("2. Register as a Teacher");
+        System.out.println("1. Register/login as a Student");
+        System.out.println("2. Register/login as a Teacher");
         
         System.out.println("Enter your choice: ");
         
@@ -18,7 +18,7 @@ public static void main(String[] args) {
                                                                                     // Student registration
             System.out.print("Enter your email: ");
             String email = input.next();
-            System.out.print("Create a password: ");
+            System.out.print("Enter password: ");
             String password = input.next();
             System.out.print("Enter your account number: ");
             int accountNumber = input.nextInt();
@@ -81,7 +81,7 @@ public static void main(String[] args) {
                 System.out.println("1. Pay for consulting");
                 int teacherChoice = input.nextInt();
                 if (teacherChoice == 1) {
-                    System.out.println("You selected 'Pay for consulting'. Add payment and communication code here.");
+                    System.out.println("You selected 'Pay for consulting'. ");      //Add payment and communication code here.
                 } else {
                     System.out.println("Invalid choice. Please select a valid option.");
                 }
